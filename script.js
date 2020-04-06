@@ -79,6 +79,21 @@ function diagonalWin(){
 }
 
 
+// check to see if the game was a tie
+function tieGame(){
+  var tableTop = $('.top-row button');
+  if ((tableTop.eq(0).css('background-color') ===  'rgb(86, 151, 255)' || tableTop.eq(0).css('background-color') === 'rgb(237, 45, 73)') &&
+   (tableTop.eq(1).css('background-color') ===  'rgb(86, 151, 255)' || tableTop.eq(1).css('background-color') === 'rgb(237, 45, 73)') &&
+   (tableTop.eq(2).css('background-color') ===  'rgb(86, 151, 255)' || tableTop.eq(2).css('background-color') === 'rgb(237, 45, 73)') &&
+   (tableTop.eq(3).css('background-color') ===  'rgb(86, 151, 255)' || tableTop.eq(3).css('background-color') === 'rgb(237, 45, 73)') &&
+   (tableTop.eq(4).css('background-color') ===  'rgb(86, 151, 255)' || tableTop.eq(4).css('background-color') === 'rgb(237, 45, 73)') &&
+   (tableTop.eq(5).css('background-color') ===  'rgb(86, 151, 255)' || tableTop.eq(5).css('background-color') === 'rgb(237, 45, 73)') &&
+   (tableTop.eq(6).css('background-color') ===  'rgb(86, 151, 255)' || tableTop.eq(6).css('background-color') === 'rgb(237, 45, 73)')){
+    alert("Tie Game! Refresh to play again!");
+  }
+}
+
+
 // game over
 function gameOver(winner){
   for (var col = 0; col < 7 ; col++){
@@ -112,6 +127,8 @@ $('.board button').on('click', function(){
   if (horizontalWin() || verticalWin() || diagonalWin()) {
     gameOver(currentName);
   }
+
+  tieGame();
 
   // switch player if no one won or was a tie game
   currentPlayer = currentPlayer * -1 ;
