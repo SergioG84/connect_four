@@ -1,1 +1,1 @@
-Connect Four game using jQuery 
+Connect Four game using jQuery and JavaScript 
