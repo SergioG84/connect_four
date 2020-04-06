@@ -1,0 +1,23 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.board {
+  display: flex;
+  justify-content: center;
+}
+
+.board button {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  background-color: rgb(128, 128, 128);
+  border: 4px solid black;
+}
